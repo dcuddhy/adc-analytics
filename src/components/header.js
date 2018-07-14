@@ -11,7 +11,7 @@ class Header extends Component {
         <div className="header-highlight"></div>
         <div className="header body-container">
           <img className="brand-logo" src={logo} alt="brand logo"/>
-          dis my header, fool
+          This is header text.
         </div>
       </div>
     );

@@ -7,7 +7,7 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        dis my FOOTER, fool
+        This is footer text.
       </div>
     );
   }
