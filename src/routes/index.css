@@ -1,0 +1,8 @@
+/* index styles will go here. */
+.body-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
