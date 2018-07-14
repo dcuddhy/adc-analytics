@@ -10,7 +10,7 @@ class Header extends Component {
       <div className="header-container">
         <div className="header-highlight"></div>
         <div className="header body-container">
-          <img className="brand-logo" src={logo} />
+          <img className="brand-logo" src={logo} alt="brand logo"/>
           dis my header, fool
         </div>
       </div>
