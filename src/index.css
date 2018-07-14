@@ -1,3 +1,10 @@
+/* Global styles will go here */
+
+/* Soon we'll start borrowing styles from Adcellerant for cohesion */
+/* h2 - roboto mono 500 35px line height 46px #535353 */
+/* h3 - roboto mono 300 35px line height 46px #263238 */
+/* body - work sans 400 15px line height 25px #666666 */
+
 body {
   margin: 0;
   padding: 0;
