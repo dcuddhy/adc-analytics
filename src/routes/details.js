@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import logo from '../assets/images/logo.svg';
+import { Link } from 'react-router-dom';
+import Header from '../components/header.js'
+import DetailsTable from '../components/detailsTable.js'
+import Footer from '../components/footer.js'
 import './index.css';
 
 
@@ -9,14 +12,15 @@ class Details extends Component {
   // hide/show elements based on width with a disclaimer.
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Header />
+        <div className="body-container">
+          <Link to="../">
+            View Index
+          </Link>
+          <DetailsTable />
+        </div>
+          <Footer />
       </div>
     );
   }
