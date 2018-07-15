@@ -1,0 +1,7 @@
+/* details table styles will go here. */
+.display-table-row {
+  background: #CEDADF;
+}
+.display-table-row:nth-child(2n+1) {
+  background: #FFFFFF;
+}
