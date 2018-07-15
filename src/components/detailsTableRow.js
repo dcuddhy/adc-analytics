@@ -9,44 +9,44 @@ class detailsTableRow extends Component {
 
   render() {
     return (
-      <div className="display-table-row">
-        <div className="device">
+      <tr className="display-table-row">
+        <td className="device">
           {this.props.dataRow.device}
-        </div>
-        <div className="hourOfDay">
+        </td>
+        <td className="hourOfDay">
           {this.props.dataRow.hourOfDay}
-        </div>
-        <div className="clicks">
+        </td>
+        <td className="clicks">
           {this.props.dataRow.clicks}
-        </div>
-        <div className="impressions">
+        </td>
+        <td className="impressions">
           {this.props.dataRow.impressions}
-        </div>
-        <div className="ctr">
+        </td>
+        <td className="ctr">
           {this.props.dataRow.ctr}
-        </div>
-        <div className="cost">
+        </td>
+        <td className="cost">
           {this.props.dataRow.cost}
-        </div>
-        <div className="avgCpc">
+        </td>
+        <td className="avgCpc">
           {this.props.dataRow.avgCpc}
-        </div>
-        <div className="avgPosition">
+        </td>
+        <td className="avgPosition">
           {this.props.dataRow.avgPosition}
-        </div>
-        <div className="searchImpressionShare">
+        </td>
+        <td className="searchImpressionShare">
           {this.props.dataRow.searchImpressionShare}
-        </div>
-        <div className="maxImpressions">
+        </td>
+        <td className="maxImpressions">
           {this.props.dataRow.maxImpressions}
-        </div>
-        <div className="campaignStatus">
+        </td>
+        <td className="campaignStatus">
           {this.props.dataRow.campaignStatus}
-        </div>
-        <div className="conversions">
+        </td>
+        <td className="conversions">
           {this.props.dataRow.conversions}
-        </div>
-      </div>
+        </td>
+      </tr>
     );
   }
 }

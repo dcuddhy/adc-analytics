@@ -1,22 +1,7 @@
 /* details table styles will go here. */
 .display-table-row {
-  background: pink;
-}
-.display-table-row div {
-  display: inline-block;
+  background: #CEDADF;
 }
 .display-table-row:nth-child(2n+1) {
-  background: yellow;
-}
-.display-table-row div:nth-of-type(2n+1) {
-  background: green !important;
-}
-.display-table-row .column-wide {
-  width: 250px;
-}
-.display-table-row .column-mid {
-  width: 60px;
-}
-.display-table-row .column-narrow {
-  width: 30px;
+  background: #FFFFFF;
 }

@@ -32,23 +32,27 @@ class DetailsTable extends Component {
 // TODO: Verify that SIS is an appropriate abbreviation to searchImpressionShare.
 render() {
     return (
-      <div className="display-table">
-        <span title="Device">Device</span>
-        <span title="Hour Of Day">Hour</span>
-        <span title="Clicks">Clicks</span>
-        <span title="Impressions">Impressions</span>
-        <span title="Click Through Rate">CTR</span>
-        <span title="Cost">Cost</span>
-        <span title="Average Cost Per Click">Avg CPC</span>
-        <span title="Average Position">Avg Position</span>
-        <span title="Search Impressions Share">SIS</span>
-        <span title="Max Impressions">Max Impressions</span>
-        <span title="Campaign Status">Campaign Status</span>
-        <span title="Conversions">Conversions</span>
+      <table className="display-table">
+        <thead>
+          <td title="Device">Device</td>
+          <td title="Hour Of Day">Hour</td>
+          <td title="Clicks">Clicks</td>
+          <td title="Impressions">Impressions</td>
+          <td title="Click Through Rate">CTR</td>
+          <td title="Cost">Cost</td>
+          <td title="Average Cost Per Click">Avg CPC</td>
+          <td title="Average Position">Avg Position</td>
+          <td title="Search Impressions Share">SIS</td>
+          <td title="Max Impressions">Max Impressions</td>
+          <td title="Campaign Status">Campaign Status</td>
+          <td title="Conversions">Conversions</td>
+        </thead>
+        <tbody>
         {this.state.dataRows.map((dataRow, index)=> {
           return <DetailsTableRow dataRow={dataRow} key={index} />
         })}
-      </div>
+        </tbody>
+      </table>
     );
   }
 }
