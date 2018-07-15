@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/header.js'
 import DetailsTable from '../components/detailsTable.js'
 import Footer from '../components/footer.js'
-import './index.css';
+import './details.css';
 
 
 class Details extends Component {

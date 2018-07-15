@@ -6,7 +6,6 @@ import Chart02 from '../components/chart02.js'
 import Chart03 from '../components/chart03.js'
 import Footer from '../components/footer.js'
 import './index.css';
-// import logo from '../assets/images/logo.svg';
 
 
 class Index extends Component {
