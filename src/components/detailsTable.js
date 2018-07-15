@@ -33,6 +33,13 @@ class DetailsTable extends Component {
       return results.json();
     }).then(data => {
       let dataRows = data.rows;
+
+      // Device values are so verbose, the data seems out of place amongst other data
+      // TODO: Verify that this change is acceptable.
+      for (var i = 0; i < dataRows.length; i++) {
+        var shortDeviceName = dataRows[i]['device'].split(' ')[0];
+        dataRows[i]['device'] = shortDeviceName;
+      }
       this.setState({dataRows: dataRows});
     }).catch(function() {
       console.log("Fetching data failed at UserList.componentDidMount()");
