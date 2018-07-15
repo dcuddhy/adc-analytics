@@ -44,7 +44,6 @@ render() {
           <td title="Average Position">Avg Position</td>
           <td title="Search Impressions Share">SIS</td>
           <td title="Max Impressions">Max Impressions</td>
-          <td title="Campaign Status">Campaign Status</td>
           <td title="Conversions">Conversions</td>
         </thead>
         <tbody>

@@ -40,9 +40,6 @@ class detailsTableRow extends Component {
         <td className="maxImpressions">
           {this.props.dataRow.maxImpressions}
         </td>
-        <td className="campaignStatus">
-          {this.props.dataRow.campaignStatus}
-        </td>
         <td className="conversions">
           {this.props.dataRow.conversions}
         </td>
