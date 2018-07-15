@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './detailsTable.css';
+import './detailsTableRow.css';
 
 
 class detailsTableRow extends Component {
@@ -10,7 +10,6 @@ class detailsTableRow extends Component {
   render() {
     return (
       <div className="display-table-row">
-        display table row<br /> <br />
         <div className="device">
           {this.props.dataRow.device}
         </div>

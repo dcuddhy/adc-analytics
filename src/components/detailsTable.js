@@ -29,10 +29,22 @@ class DetailsTable extends Component {
 
 // We can use dataRow.searchImpressionShare as a key, but that seems weird.  Let's use an index.
 // Using an index might get messy if users are able to mutate data, but we are strictly displaying.
+// TODO: Verify that SIS is an appropriate abbreviation to searchImpressionShare.
 render() {
     return (
       <div className="display-table">
-        display table <br /> <br />
+        <span title="Device">Device</span>
+        <span title="Hour Of Day">Hour</span>
+        <span title="Clicks">Clicks</span>
+        <span title="Impressions">Impressions</span>
+        <span title="Click Through Rate">CTR</span>
+        <span title="Cost">Cost</span>
+        <span title="Average Cost Per Click">Avg CPC</span>
+        <span title="Average Position">Avg Position</span>
+        <span title="Search Impressions Share">SIS</span>
+        <span title="Max Impressions">Max Impressions</span>
+        <span title="Campaign Status">Campaign Status</span>
+        <span title="Conversions">Conversions</span>
         {this.state.dataRows.map((dataRow, index)=> {
           return <DetailsTableRow dataRow={dataRow} key={index} />
         })}

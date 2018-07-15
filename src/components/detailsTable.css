@@ -2,3 +2,8 @@
 .display-table {
   /* styles */
 }
+.display-table span {
+  display: inline-block;
+  /* min-width: 60px; */
+  padding: 5px;
+}
