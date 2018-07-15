@@ -5,3 +5,6 @@
 .display-table-row:nth-child(2n+1) {
   background: #FFFFFF;
 }
+.device {
+  min-width: 280px;
+}
