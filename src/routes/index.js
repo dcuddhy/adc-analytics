@@ -105,6 +105,10 @@ class Index extends Component {
           <ChartImpressions totalImpressions={this.state.totalImpressions} averageImpressions={this.state.averageImpressions} />
           <ChartClicks totalClicks={this.state.totalClicks} averageClicks={this.state.averageClicks} />
           <ChartConversions totalConversions={this.state.totalConversions} averageConversions={this.state.averageConversions} />
+          {
+            // We should eventually add graphs (pie, line, bar, etc) below these.
+            // These charts should be full width and interactive.
+          }
         </div>
         <Footer />
       </div>
