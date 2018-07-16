@@ -48,9 +48,9 @@ class Details extends Component {
     });
   }
 
-  // This is where we will show a sortable table with all details from all columns
-  // NOTE: this is inherently not mobile-friendly.  Will likely use media queries to
-  // hide/show elements based on width with a disclaimer.
+  // We should make a component that displays company, campaign name and day of \
+  // the week at the top of body-container. Consider breadcrumbs.
+  // We should also style links.
   render() {
     return (
       <div>

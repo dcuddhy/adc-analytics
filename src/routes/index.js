@@ -90,6 +90,9 @@ class Index extends Component {
     });
   }
 
+  // We should make a component that displays company, campaign name and day of \
+  // the week at the top of body-container. Consider breadcrumbs.
+  // We should also style links.
   render() {
     return (
       <div>

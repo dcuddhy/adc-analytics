@@ -8,8 +8,6 @@ class DetailsTable extends Component {
     this.props.sortDataRows(object, value, order);
   }
 
-  // We should probably create a detailsTableHeader component.  There is a lot of
-  // repetition here.  That may require creating an array of values - referring to sortDataRows() params.
   render() {
     return (
       <div className="display-table-container">
@@ -19,6 +17,10 @@ class DetailsTable extends Component {
           in a larger window.
         </em></div>
         <table className="display-table">
+          {
+            // We should probably create a detailsTableHeader component.  There is a lot of
+            // repetition here.  That may require creating an array of values - referring to sortDataRows() params.
+          }
           <thead>
             <tr>
               <td className="device" title="Device">
