@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import './chart02.css';
+import './chartImpressions.css';
 
 
-class Chart02 extends Component {
-  // This is where we will display the second chart.
+class ChartImpressions extends Component {
   render() {
     return (
-      <div className="chart02">
+      <div className="chartImpressions">
         Total Impressions: {this.props.totalImpressions} <br />
         Average Impressions Per Hour: {this.props.averageImpressions} <br />
       </div>
@@ -14,4 +13,4 @@ class Chart02 extends Component {
   }
 }
 
-export default Chart02;
+export default ChartImpressions;

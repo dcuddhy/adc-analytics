@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import './chart01.css';
+import './chartCost.css';
 
 
-class Chart01 extends Component {
-  // This is where we will display the first chart.
+class ChartCost extends Component {
   render() {
     return (
-      <div className="chart01">
+      <div className="chartCost">
         Total Cost: {this.props.totalCost} <br />
         Average Cost Per Hour: {this.props.averageCost} <br />
       </div>
@@ -14,4 +13,4 @@ class Chart01 extends Component {
   }
 }
 
-export default Chart01;
+export default ChartCost;

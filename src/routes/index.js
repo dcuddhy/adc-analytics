@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/header.js'
-import Chart01 from '../components/chart01.js'
-import Chart02 from '../components/chart02.js'
-import Chart03 from '../components/chart03.js'
-import Chart04 from '../components/chart04.js'
+import ChartCost from '../components/chartCost.js'
+import ChartImpressions from '../components/chartImpressions.js'
+import ChartClicks from '../components/chartClicks.js'
+import ChartConversions from '../components/chartConversions.js'
 import Footer from '../components/footer.js'
 import './index.css';
 
@@ -26,8 +26,7 @@ class Index extends Component {
     };
   }
 
-  componentWillMount() {
-    console.log('componentWillMount()');
+  componentDidMount() {
     fetch('//api.jsonbin.io/b/5b4a8b29dd2c022ecda27a5c')
     .then(results => {
       return results.json();
@@ -84,8 +83,8 @@ class Index extends Component {
       this.setState({averageImpressions: averageImpressions});
       this.setState({totalClicks: totalClicks});
       this.setState({averageClicks: averageClicks});
-      this.setState({totalClicks: totalConversions});
-      this.setState({averageClicks: averageConversions});
+      this.setState({totalConversions: totalConversions});
+      this.setState({averageConversions: averageConversions});
     }).catch(function() {
       console.log("Fetching data failed at UserList.componentDidMount()");
     });
@@ -99,10 +98,10 @@ class Index extends Component {
           <Link to="./details/">
             View Details
           </Link>
-          <Chart01 totalCost={this.state.totalCost} averageCost={this.state.averageCost} />
-          <Chart02 totalImpressions={this.state.totalImpressions} averageImpressions={this.state.averageImpressions} />
-          <Chart03 totalClicks={this.state.totalClicks} averageClicks={this.state.averageClicks} />
-          <Chart04 totalConversions={this.state.totalConversions} averageConversions={this.state.averageConversions} />
+          <ChartCost totalCost={this.state.totalCost} averageCost={this.state.averageCost} />
+          <ChartImpressions totalImpressions={this.state.totalImpressions} averageImpressions={this.state.averageImpressions} />
+          <ChartClicks totalClicks={this.state.totalClicks} averageClicks={this.state.averageClicks} />
+          <ChartConversions totalConversions={this.state.totalConversions} averageConversions={this.state.averageConversions} />
         </div>
         <Footer />
       </div>
