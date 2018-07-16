@@ -16,11 +16,11 @@ class detailsTableRow extends Component {
         <td className="hourOfDay">
           {this.props.dataRow.hourOfDay}
         </td>
-        <td className="clicks">
-          {this.props.dataRow.clicks}
-        </td>
         <td className="impressions">
           {this.props.dataRow.impressions}
+        </td>
+        <td className="clicks">
+          {this.props.dataRow.clicks}
         </td>
         <td className="ctr">
           {this.props.dataRow.ctr}
