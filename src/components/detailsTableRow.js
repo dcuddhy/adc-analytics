@@ -3,10 +3,6 @@ import './detailsTableRow.css';
 
 
 class detailsTableRow extends Component {
-  componentDidMount() {
-    console.log(this.props);
-  }
-
   render() {
     return (
       <tr className="display-table-row">
