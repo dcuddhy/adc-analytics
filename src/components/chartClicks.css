@@ -1,1 +1,8 @@
 /* chartClicks styles will go here. */
+/* For now, each chart is a unique color. When we eventually add interactive graphs */
+/* we'll have an opportunity to add colors there.  Then it will make more sense to */
+/* make all total/avg chartValue colors the same, probably #69ACD4 */
+.chartClicks .chartValue,
+.chartClicks .chartValue {
+  color: #786DB4;
+}

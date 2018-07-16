@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import './chartClicks.css';
+import './chartConversions.css';
 
 
 class ChartConversions extends Component {
   render() {
     return (
       <div className="chart chartConversions">
-        Total Conversions: {this.props.totalConversions} <br />
-        Avg. Conversions / Hour: {this.props.averageConversions} <br />
+        <h3>Total Conversions: </h3>
+        <div className="chartValue">
+          {this.props.totalConversions}
+        </div>
+        <h5>Avg. / Hour: {this.props.averageConversions}</h5>
       </div>
     );
   }

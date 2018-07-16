@@ -97,7 +97,7 @@ class Index extends Component {
         <div className="body-container">
           <Link to="./details/">
             View Details
-          </Link>
+          </Link> <br />
           <ChartCost totalCost={this.state.totalCost} averageCost={this.state.averageCost} />
           <ChartImpressions totalImpressions={this.state.totalImpressions} averageImpressions={this.state.averageImpressions} />
           <ChartClicks totalClicks={this.state.totalClicks} averageClicks={this.state.averageClicks} />
