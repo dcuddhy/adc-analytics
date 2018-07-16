@@ -5,9 +5,9 @@ import './chartClicks.css';
 class ChartConversions extends Component {
   render() {
     return (
-      <div className="chartConversions">
+      <div className="chart chartConversions">
         Total Conversions: {this.props.totalConversions} <br />
-        Average Conversions Per Hour: {this.props.averageConversions} <br />
+        Avg. Conversions / Hour: {this.props.averageConversions} <br />
       </div>
     );
   }
