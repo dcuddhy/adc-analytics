@@ -12,12 +12,12 @@ class Index extends Component {
   constructor() {
     super();
     this.state = {
-      uniqueHours: [],
       dataRows: [],
+      uniqueHours: [],
       totalImpressions: 0,
       averageImpressions: 0,
       totalViews: 0
-        };
+    };
   }
 
   componentWillMount() {
@@ -26,47 +26,37 @@ class Index extends Component {
     .then(results => {
       return results.json();
     }).then(data => {
+      // Set dataRows, the full data set.
       let dataRows = data.rows;
-
-      // Device values are so verbose, the data seems out of place amongst other data
-      // TODO: Verify that this change is acceptable.
-      for (var i = 0; i < dataRows.length; i++) {
-        var shortDeviceName = dataRows[i]['device'].split(' ')[0];
-        dataRows[i]['device'] = shortDeviceName;
-      }
       this.setState({dataRows: dataRows});
 
-      // Get uniqueHours
+      // Set all data subsets.
       var uniqueHours = [];
+      var totalImpressions = 0;
       for (var i = 0; i < dataRows.length; i++) {
+        // Device values are so verbose, the data seems out of place amongst other data
+        // TODO: Verify that this change is acceptable.
+        var shortDeviceName = dataRows[i]['device'].split(' ')[0];
+        dataRows[i]['device'] = shortDeviceName;
+
+        // Get uniqueHours
         if (! uniqueHours.includes(dataRows[i]['hourOfDay'])) {
           uniqueHours.push(dataRows[i]['hourOfDay']);
         }
-      }
-      this.setState({uniqueHours: uniqueHours});
-      var totalHours = uniqueHours.length;
 
-      //Get totalImpressions;
-      var totalImpressions = 0;
-      for (var i = 0; i < dataRows.length; i++) {
-        var shortDeviceName = dataRows[i]['device'].split(' ')[0];
+        //Get totalImpressions;
         totalImpressions = totalImpressions + dataRows[i]['impressions'];
       }
+      var totalHours = uniqueHours.length;
+      var averageImpressions = (totalImpressions / totalHours).toFixed(2);
+      this.setState({uniqueHours: uniqueHours});
       this.setState({totalImpressions: totalImpressions});
-
-      // Get averageImpressions
-      var averageImpressions = (totalImpressions / totalHours).toFixed(2);;
       this.setState({averageImpressions: averageImpressions});
-
     }).catch(function() {
       console.log("Fetching data failed at UserList.componentDidMount()");
     });
   }
-  // This is where we will show a sortable table with all details from all columns
-  // NOTE: this is inherently not mobile-friendly.  Will likely use media queries to
-  // hide/show elements based on width with a disclaimer.
 
-  // <DetailsTable dataRows={this.state.dataRows} dataRowsOrder={this.state.dataRowsOrder} sortDataRows={this.sortDataRows}/>
   render() {
     return (
       <div>
@@ -76,8 +66,8 @@ class Index extends Component {
             View Details
           </Link>
           <Chart01 totalImpressions={this.state.totalImpressions} averageImpressions={this.state.averageImpressions} />
-          <Chart02 />
-          <Chart03 />
+          <Chart02 totalImpressions={this.state.totalImpressions} averageImpressions={this.state.averageImpressions} />
+          <Chart03 totalImpressions={this.state.totalImpressions} averageImpressions={this.state.averageImpressions} />
         </div>
         <Footer />
       </div>
