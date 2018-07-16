@@ -7,9 +7,8 @@ class Chart01 extends Component {
   render() {
     return (
       <div className="chart01">
-        Total Impressions: {this.props.totalImpressions} <br />
-        Average Impressions Per Hour: {this.props.averageImpressions} <br />
-        {console.log('totalImpressions! ', this.props.totalImpressions)}
+        Total Cost: {this.props.totalCost} <br />
+        Average Cost Per Hour: {this.props.averageCost} <br />
       </div>
     );
   }

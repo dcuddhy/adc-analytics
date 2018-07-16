@@ -6,8 +6,9 @@ class Chart02 extends Component {
   // This is where we will display the second chart.
   render() {
     return (
-      <div className="chart-02">
-        chart 02
+      <div className="chart02">
+        Total Impressions: {this.props.totalImpressions} <br />
+        Average Impressions Per Hour: {this.props.averageImpressions} <br />
       </div>
     );
   }
