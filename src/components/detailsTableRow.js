@@ -3,10 +3,6 @@ import './detailsTableRow.css';
 
 
 class detailsTableRow extends Component {
-  componentDidMount() {
-    console.log(this.props);
-  }
-
   render() {
     return (
       <tr className="display-table-row">
@@ -16,11 +12,11 @@ class detailsTableRow extends Component {
         <td className="hourOfDay">
           {this.props.dataRow.hourOfDay}
         </td>
-        <td className="clicks">
-          {this.props.dataRow.clicks}
-        </td>
         <td className="impressions">
           {this.props.dataRow.impressions}
+        </td>
+        <td className="clicks">
+          {this.props.dataRow.clicks}
         </td>
         <td className="ctr">
           {this.props.dataRow.ctr}

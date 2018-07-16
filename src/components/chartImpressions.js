@@ -5,9 +5,9 @@ import './chartImpressions.css';
 class ChartImpressions extends Component {
   render() {
     return (
-      <div className="chartImpressions">
+      <div className="chart chartImpressions">
         Total Impressions: {this.props.totalImpressions} <br />
-        Average Impressions Per Hour: {this.props.averageImpressions} <br />
+        Avg Impressions / Hour: {this.props.averageImpressions} <br />
       </div>
     );
   }
