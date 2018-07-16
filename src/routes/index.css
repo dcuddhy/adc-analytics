@@ -8,4 +8,30 @@
 }
 .chart {
   margin-top: 10px;
+  display: inline-block;
+  width: 33%;
+  min-width: 205px;
+  height: 200px;
+  text-align: center;
+}
+.chartValue{
+  font-size: 64px;
+}
+@media (max-width: 660px) {
+  .chart {
+    margin: 80px 0 40px 0;
+    display: block;
+    width: 100%;
+    min-width: 205px;
+    height: auto;
+  }
+  .chart h3 {
+    font-size: 1.75em;
+  }
+  .chart h5 {
+    font-size: 1em;
+  }
+  .chartValue{
+    font-size: 5em;
+  }
 }

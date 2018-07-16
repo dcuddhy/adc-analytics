@@ -90,6 +90,9 @@ class Index extends Component {
     });
   }
 
+  // We should make a component that displays company, campaign name and day of \
+  // the week at the top of body-container. Consider breadcrumbs.
+  // We should also style links.
   render() {
     return (
       <div>
@@ -97,11 +100,15 @@ class Index extends Component {
         <div className="body-container">
           <Link to="./details/">
             View Details
-          </Link>
+          </Link> <br />
           <ChartCost totalCost={this.state.totalCost} averageCost={this.state.averageCost} />
           <ChartImpressions totalImpressions={this.state.totalImpressions} averageImpressions={this.state.averageImpressions} />
           <ChartClicks totalClicks={this.state.totalClicks} averageClicks={this.state.averageClicks} />
           <ChartConversions totalConversions={this.state.totalConversions} averageConversions={this.state.averageConversions} />
+          {
+            // We should eventually add graphs (pie, line, bar, etc) below these.
+            // These charts should be full width and interactive.
+          }
         </div>
         <Footer />
       </div>

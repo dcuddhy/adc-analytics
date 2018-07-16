@@ -5,9 +5,10 @@ import './chartCost.css';
 class ChartCost extends Component {
   render() {
     return (
-      <div className="chart chartCost">
-        Total Cost: {this.props.totalCost} <br />
-        Avg Cost / Hour: {this.props.averageCost} <br />
+      <div className="chartCost">
+        <h3>Total Cost: <span>{this.props.totalCost}</span></h3>
+
+        <h5>Avg / Hour: <span>{this.props.averageCost}</span></h5>
       </div>
     );
   }

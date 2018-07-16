@@ -6,8 +6,11 @@ class ChartClicks extends Component {
   render() {
     return (
       <div className="chart chartClicks">
-        Total Clicks: {this.props.totalClicks} <br />
-        Avg. Clicks / Hour: {this.props.averageClicks} <br />
+        <h3>Total Clicks: </h3>
+        <div className="chartValue">
+          {this.props.totalClicks}
+        </div>
+        <h5>Avg. / Hour: {this.props.averageClicks}</h5>
       </div>
     );
   }
